@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
     if ($allow_username_to_input == TRUE && $allow_passwd_to_input == TRUE) {
         if (include 'DBConnect.php') {
             $sql = "SELECT * FROM users WHERE  username = '$Lusername' && password = md5('$Lpasswd')";
-            $result = $mysqli->query($sql) or die(mysqli_error());
+            $result = $conn->query($sql)or die(mysqli_error());
             if ($result === FALSE) {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             } elseif ($result->num_rows == 0) {

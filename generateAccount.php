@@ -26,7 +26,7 @@
                 Role:
                 <select name="role">
                     <?php
-                    include 'DBConnect.php';
+                    include 'DBconnect.php';
                     $getCourse = "SELECT * FROM role";
                     $result = $conn->query($getCourse) or die(mysqli_error());
                     if ($result->num_rows > 0) {
