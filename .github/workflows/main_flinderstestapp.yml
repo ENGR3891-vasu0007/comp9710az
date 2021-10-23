@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'flinderstestapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E6875E684AD4DF8B158CE08B7051DA4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_10F749CE96EF4B198853909AE1A52CF2 }}
           package: .
