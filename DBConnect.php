@@ -16,3 +16,4 @@ if (mysqli_connect_errno($conn)) {
     echo "Connected";
 }
 ?>
+<p>hello</p>
