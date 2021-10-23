@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
             $LusernameErr = "User not exists";
         }
         $conn->close();
-        echo "SESSION[loggedin]" . $_SESSION["loggedin"];
+        echo "SESSION[username]" . $_SESSION["username"];
     }
 }
 ?>
