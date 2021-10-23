@@ -7,7 +7,7 @@ $password = 'Flinders@';
 $db_name = 'comp9710';
 $conn = mysqli_init();
 
-mysqli_ssl_set($conn, NULL, NULL, "DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+mysqli_ssl_set($conn, NULL, NULL, "cacert.pem", NULL, NULL);
 
 // Establish the connection
 mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306, NULL, MYSQLI_CLIENT_SSL);
@@ -16,6 +16,6 @@ mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306, NULL, MY
 if (mysqli_connect_errno()) {
     die('Failed to connect to MySQL: ' . mysqli_connect_error());
 } else {
-    echo "Connect to mySQL successfully DigiCertGlobalRootG2<br/>";
+    echo "Connect to mySQL successfully cacert<br/>";
 }
 ?>
