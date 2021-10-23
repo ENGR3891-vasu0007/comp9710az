@@ -99,7 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
                 $_SESSION["usertype"] = $row ['role_id'];
                 $_SESSION["userid"] = $row ['user_id'];
                 $_SESSION["load"] = "none";
-                header("location: user.php");
             }
             if ($conn->query($sql) === FALSE) {
                 echo "Error: " . $sql . "<br>" . $conn->error;
