@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
                 $conn->close();
             }
         }
-        header("location: http://localhost/COMP9710/adminPanel.php#editUser.php");
+        header("location: http://localhost/COMP9710/editUser.php");
     } else {
         $fanErr = "FAN cannot be empty.";
         header('Location: ' . $_SERVER['HTTP_REFERER']);
