@@ -76,10 +76,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['select_activity'])) {
     </div>
 
     <div class="split right">
-        <a href="http://23.96.45.10:6090/">Full screen for Kali</a>
-        <iframe src="http://23.96.45.10:6090/" id="kali"  width="100%" height="50%"></iframe>
-        <a href="http://23.96.45.10:6086/">Full screen for Metasploitable</a>
-        <iframe src="http://23.96.45.10:6086/" id="metasploitable "  width="100%" height="50%"></iframe>
+        <?php
+        $getIP1 = "";
+        $getIP2 = "";
+        $user = $_SESSION['username'];
+        $sql = "SELECT * FROM `users` WHERE `username` = '$user'";
+        $result = $conn->query($sql) or die(mysqli_error());
+        if ($result->num_rows > 0) {
+            while ($row = mysqli_fetch_array($result)) {
+                $getIP1 = $row ['vm1_port'];
+                $getIP2 = $row ['vm2_port'];
+            }
+        }
+        $conn->close();
+        ?>
+        <a href="http://23.96.45.10:<?php echo $getIP1; ?>/">Full screen for Kali</a>
+        <iframe src="http://23.96.45.10:<?php echo $getIP1; ?>/" id="kali"  width="100%" height="50%"></iframe>
+        <a href="http://23.96.45.10:<?php echo $getIP2; ?>/">Full screen for Metasploitable</a>
+        <iframe src="http://23.96.45.10:<?php echo $getIP2; ?>/" id="metasploitable "  width="100%" height="50%"></iframe>
     </div>
 </body>
 </html> 
