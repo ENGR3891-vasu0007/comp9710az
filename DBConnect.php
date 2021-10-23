@@ -16,6 +16,6 @@ mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306, NULL, MY
 if (mysqli_connect_errno()) {
     die('Failed to connect to MySQL: ' . mysqli_connect_error());
 } else {
-    echo "Connect to mySQL successfully <br/>";
+    echo "Connect to mySQL successfully with DigiCertGlobalRootG2<br/>";
 }
 ?>
