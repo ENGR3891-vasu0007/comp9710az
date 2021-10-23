@@ -1,0 +1,61 @@
+#thead {
+    background: #0d6efd6b;
+}
+
+#heading {
+    margin-top: 50px;
+}
+
+#container {
+    width: 100%;
+    margin: 10;
+}
+
+.upload-section .title {
+    background-color: #0068e3;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.container .title{
+    background-color: #0068e3;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.upload-section form > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.upload-section form label {
+    width: 20%;
+    min-width: 20%;
+}
+.upload-section form input,
+select {
+    width: 80%;
+}
+.upload-section form input[type="text"] {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgb(162, 162, 162);
+    cursor: auto;
+    padding: 10px;
+}
+.upload-section form .upload-btn{
+    width: 200px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: relative;
+    padding-top: 75px;
+    margin: 0;
+}

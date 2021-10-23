@@ -1,0 +1,95 @@
+.iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+a {
+    margin: 10px;
+    padding: 18px;
+}
+button {
+    background-color: #002d62;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+.collapsible:after {
+    content: "\002B";
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 0px 8px;
+}
+
+.view:after {
+    content: "\2212";
+}
+.content {
+    padding: 0;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.split.left {
+    border: 1px solid #eee;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.split.right table th {
+    height: 100%;
+    background: #eee;
+}
+
+.content .collapsible {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+.content .collapsible:before {
+    content: "\002B";
+    color: #000;
+    font-weight: bold;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 0px 8px;
+}
+
+.inner-content {
+    padding-left: 60px;
+}
+
+.inner-content.list h3 {
+    background-color: #9f9f9f;
+    font-size: 1.5rem;
+    padding: 15px 5px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.inner-content.list a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0;
+}
+.title{
+    background-color: #0068e3;
+    color: #fff;
+    padding: 10;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
