@@ -24,7 +24,7 @@ include 'user_register_login.php';
         <?php
         echo "<div class=\"topnav\" id=\"myTopnav\">";
         echo "<img class='brand-image' src='img/logo-white.png' />";
-        //if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+        if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         echo "<a class=\"logout\" href=\"logout.php\">Logout</a>";
         if (basename($_SERVER['PHP_SELF']) == "QandA.php") {
             echo "<a class=\"active\" href=\"QandA.php\">?</a>";
@@ -61,13 +61,13 @@ include 'user_register_login.php';
                 echo "<a href=\"user.php\">Home</a>";
             }
         }
-        //} else {
+        } else {
         if (basename($_SERVER['PHP_SELF']) == "index.php") {
             echo "<a class=\"active\" href=\"index.php\">Login/Sign up</a>";
         } else {
             echo "<a href=\"index.php\">Login/Sign up</a>";
         }
-        //}
+        }
         echo "<a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">";
         echo "<i class=\"fa fa-bars\"></i>";
         echo "</a>";
