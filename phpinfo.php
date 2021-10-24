@@ -1,4 +1,4 @@
 <?php
-
-echo 'PHP version: ' . phpversion();
+phpinfo();
+//echo 'PHP version: ' . phpversion();
 ?>
