@@ -3,6 +3,7 @@
     include 'topbar.php';
     ?>
     <head>
+        <title>User page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-5.1.2-dist/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/styleBG2.css">
