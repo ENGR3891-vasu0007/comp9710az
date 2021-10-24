@@ -4,9 +4,9 @@
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         // Redirect user to activity page
         if ($_SESSION["usertype"] == 3) {
-            header("location: user.php");
+            header('Location: user.php');
         } else {
-            header("location: moduleManage.php");
+            header('Location: moduleManage.php');
         }
     }
     ?>

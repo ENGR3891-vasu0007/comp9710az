@@ -58,10 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
                 $conn->close();
             }
         }
-        header("location: http://localhost/COMP9710/editUser.php");
+        header("location: editUser.php");
     } else {
         $fanErr = "FAN cannot be empty.";
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        header('Location: generateAccount.php');
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_submit'])) {
     if (empty($_POST["Lusername"])) {
@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
             $LusernameErr = "User not exists";
         }
         $conn->close();
-        echo "SESSION[username]" . $_SESSION["username"];
+        echo "SESSION[usertype] = " . $_SESSION["usertype"];
     }
 }
 ?>
