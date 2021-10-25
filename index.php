@@ -1,16 +1,26 @@
 <html>
     <?php
+    error_reporting(E_ALL | E_WARNING | E_NOTICE);
+    ini_set('display_errors', TRUE);
+    header_remove();
+    flush();
+    header("Location: http://www.google.com/");
+    die('should have redirected by now');
     include 'user_register_login.php';
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+        echo "inside if";
         // Redirect user to activity page
         if ($_SESSION["usertype"] == 3) {
-            header('Location: user.php');
+            echo "user";
+            header('Location: https://flindersproject.azurewebsites.net/user.php');
             exit;
         } else {
-            header('Location: moduleManage.php');
+            echo "admin";
+            header('Location: https://flindersproject.azurewebsites.net/moduleManage.php');
             exit;
         }
     }
+    echo "welcome"
     ?>
 
     <head>
