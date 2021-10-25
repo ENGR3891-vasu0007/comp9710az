@@ -50,6 +50,7 @@ if ($uploadOk == 0 || empty($_POST["videoName"]) || empty($_POST["activity"])) {
             }
             $conn->close();
             header("location: moduleManage.php");
+            exit;
         }
     } elseif ($link != null) {
         include_once 'DBConnect.php';
@@ -62,6 +63,7 @@ if ($uploadOk == 0 || empty($_POST["videoName"]) || empty($_POST["activity"])) {
         $conn->close();
         //echo $link;
         header("location: moduleManage.php");
+        exit;
     } else {
         echo "Sorry, there was an error uploading your file. ";
     }

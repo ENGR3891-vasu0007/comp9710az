@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['select_activity'])) {
             <p><?php
                 if ($activityID == "") {
                     header("Location: user.php");
+                    exit;
                 }
                 if ($activity_name == "") {
                     echo "Activity not exist";

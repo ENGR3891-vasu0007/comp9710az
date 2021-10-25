@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['module_submit'])) {
     if ($start_date > $end_date) {
         $dateErr = "The start date is older than the end daste. Please check and re-input.";
         header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit;
     } else {
         if ($moduleName != null) {
             if (include 'DBConnect.php') {
@@ -33,9 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['module_submit'])) {
                 }
                 $conn->close();
                 header("location: moduleManage.php");
+                exit;
             }
         } else {
             header('Location: ' . $_SERVER['HTTP_REFERER']);
+            exit;
         }
     }
 } elseif ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['activity_submit'])) {
@@ -47,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['module_submit'])) {
     if ($start_date > $end_date) {
         $dateErr = "The start date is older than the end daste. Please check and re-input.";
         header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit;
     } else {
         if ($activityName != null) {
             if (include 'DBConnect.php') {
@@ -59,9 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['module_submit'])) {
                 }
                 $conn->close();
                 header("location: moduleManage.php");
+                exit;
             }
         } else {
             header('Location: ' . $_SERVER['HTTP_REFERER']);
+            exit;
         }
     }
 }

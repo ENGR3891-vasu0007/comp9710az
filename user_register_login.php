@@ -32,6 +32,7 @@ $allow_passwd_to_input = FALSE;
 
 if (basename($_SERVER['PHP_SELF']) != "index.php" && $_SESSION["loggedin"] != true) {
     header("location: index.php");
+    exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
@@ -59,9 +60,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
             }
         }
         header("location: editUser.php");
+        exit;
     } else {
         $fanErr = "FAN cannot be empty.";
         header('Location: generateAccount.php');
+        exit;
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_submit'])) {
     if (empty($_POST["Lusername"])) {
@@ -107,7 +110,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_submit'])) {
             $LusernameErr = "User not exists";
         }
         $conn->close();
-        echo "SESSION[usertype] = " . $_SESSION["usertype"];
+        if ($_SESSION["usertype"] == 3) {
+            header('Location: user.php');
+            exit;
+        } else {
+            header('Location: moduleManage.php');
+            exit;
+        }
     }
 }
 ?>

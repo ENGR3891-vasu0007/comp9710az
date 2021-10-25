@@ -1,7 +1,7 @@
 <?php
 
 #DBConnect.php
-$host = 'mytestserver2.mysql.database.azure.com';
+$host = 'mytestserver1.mysql.database.azure.com';
 $username = 'vasulg';
 $password = 'Flinders@';
 $db_name = 'comp9710';

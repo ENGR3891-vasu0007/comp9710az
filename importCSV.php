@@ -100,5 +100,6 @@ include 'topbar.php';
 
         echo "Upload completed";
         header('refresh:5; url=moduleManage.php');
+        exit;
     }
     ?>

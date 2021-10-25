@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['user_update'])) {
         }
         $conn->close();
     }
-    //header("Location:editUser.php");
+    header("Location:editUser.php");
+    exit;
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['user_delete'])) {
     $userid = $_POST['userID'];
     if (include 'DBConnect.php') {
@@ -35,5 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['user_update'])) {
         $conn->close();
     }
     header("Location:editUser.php");
+    exit;
 }
 ?>

@@ -1,6 +1,5 @@
 <html>
     <?php
-    echo "SESSION[usertype] = " . $_SESSION["usertype"];
     include 'topbar.php';
     ?>
     <head>
