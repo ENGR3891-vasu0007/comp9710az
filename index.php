@@ -2,8 +2,6 @@
     <?php
     error_reporting(E_ALL | E_WARNING | E_NOTICE);
     ini_set('display_errors', TRUE);
-    header_remove();
-    flush();
     include 'user_register_login.php';
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         echo "inside if";
