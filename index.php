@@ -4,8 +4,6 @@
     ini_set('display_errors', TRUE);
     header_remove();
     flush();
-    header("Location: http://www.google.com/");
-    die('should have redirected by now');
     include 'user_register_login.php';
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         echo "inside if";
