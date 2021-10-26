@@ -1,22 +1,16 @@
 <html>
     <?php
-    error_reporting(E_ALL | E_WARNING | E_NOTICE);
-    ini_set('display_errors', TRUE);
     include 'user_register_login.php';
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-        echo "inside if";
         // Redirect user to activity page
         if ($_SESSION["usertype"] == 3) {
-            echo "user";
-            header('Location: https://flindersproject.azurewebsites.net/user.php');
+            header('Location: user.php');
             exit;
         } else {
-            echo "admin";
-            header('Location: https://flindersproject.azurewebsites.net/moduleManage.php');
+            header('Location: moduleManage.php');
             exit;
         }
     }
-    echo "welcome"
     ?>
 
     <head>
