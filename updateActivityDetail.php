@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activity_update'])) {
         $conn->close();
     }
     header("Location:editActivity.php");
-    exit;
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activity_delete'])) {
     $activityid = $_POST['activityID'];
     if (include 'DBConnect.php') {
@@ -52,6 +51,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activity_update'])) {
         $conn->close();
     }
     header("Location:editActivity.php");
-    exit;
 }
 ?>

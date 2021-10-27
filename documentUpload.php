@@ -38,7 +38,6 @@ if ($uploadOk == 0) {
         $result = $conn->query($sql) or die(mysqli_error());
         $conn->close();
         header("location: moduleManage.php");
-        exit;
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

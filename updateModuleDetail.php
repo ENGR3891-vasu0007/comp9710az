@@ -25,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['module_update'])) {
         $conn->close();
     }
     header("Location:editModules.php");
-    exit;
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['module_delete'])) {
     $moduleid = $_POST['moduleID'];
     if (include 'DBConnect.php') {
@@ -55,6 +54,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['module_update'])) {
         $conn->close();
     }
     header("Location:editModules.php");
-    exit;
 }
 ?>

@@ -1,4 +1,5 @@
-USE comp9710;
+create database IF NOT EXISTs comp9710;
+use comp9710;
 
 CREATE TABLE `activity` (
   `activity_id` int(5) NOT NULL COMMENT 'Unique number ID for all activities',

@@ -1,7 +1,10 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include 'topbar.php';
+?>
 <html>
-    <?php
-    include 'topbar.php';
-    ?>
     <head>
         <title>User page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">

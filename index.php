@@ -1,18 +1,18 @@
-<html>
-    <?php
-    include 'user_register_login.php';
-    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-        // Redirect user to activity page
-        if ($_SESSION["usertype"] == 3) {
-            header('Location: user.php');
-            exit;
-        } else {
-            header('Location: moduleManage.php');
-            exit;
-        }
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include 'user_register_login.php';
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    // Redirect user to activity page
+    if ($_SESSION["usertype"] == 3) {
+        header('Location: user.php');
+    } else {
+        header('Location: moduleManage.php');
     }
-    ?>
-
+}
+?>
+<html>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-5.1.2-dist/css/bootstrap.min.css" />
